@@ -9,9 +9,3 @@ v:FindFirstChild("Handle").CFrame =  game.Players.LocalPlayer.Character.Humanoid
 end
 end
 end
-
-game.StarterGui:SetCore("SendNotification", {
-Title = "PickUp Tools"; -- title of notification
-Text = "Stopped"; -- bottom text
-Duration = 5; -- how long notification is on screen
-})
