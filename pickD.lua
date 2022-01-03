@@ -18,10 +18,3 @@ Main = {
     Rounding = true,
 }
 });
-
-Notification.Notify("Yo", "Subscribe To HemLish For More Free and OP Feature", "rbxassetid://8327950081", {
-Duration = 6,       
-Main = {
-    Rounding = true,
-}
-});
