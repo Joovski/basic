@@ -1,12 +1,20 @@
-_G.toggle = true  --- change it to false to stop the script
-while _G.toggle == true do  
-wait()
-for i, v in pairs (game.Workspace.tools:GetChildren()) do
-if v:IsA("Tool") and v:FindFirstChild("Handle")    
-then
-v:FindFirstChild("Handle").CFrame =  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-   wait(0.3)
+if _G.Connection and #_G.Connection > 0 then
+    for i,v in pairs(_G.Connection) do
+        v:Disconnect()
+    end
+ end
+ _G.Connection = {}
+ table.insert(_G.Connection,game:GetService("RunService").Stepped:Connect(function()
+local Human = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid")
+    for i,v in pairs(workspace.tools:GetChildren()) do
+            if game.Players.LocalPlayer.Character and v:IsA("Tool") and v:FindFirstChild("Handle") then
+                Human:EquipTool(v)
+            end
 end
-end
-end
+end))
 
+game.StarterGui:SetCore("SendNotification", {
+Title = "PickUp Tools"; -- title of notification
+Text = "Activated"; -- bottom text
+Duration = 5; -- how long notification is on screen
+})
