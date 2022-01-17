@@ -13,9 +13,3 @@ end
 end)
 wait(0.25)
 _G.Connection.SteppedConnection:Disconnect()
-
-game.StarterGui:SetCore("SendNotification", {
-Title = "PickUp Tools"; -- title of notification
-Text = "Stopped"; -- bottom text
-Duration = 5; -- how long notification is on screen
-})
