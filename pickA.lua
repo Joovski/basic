@@ -12,9 +12,3 @@ local Human = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoi
             end
 end
 end))
-
-game.StarterGui:SetCore("SendNotification", {
-Title = "PickUp Tools"; -- title of notification
-Text = "Activated"; -- bottom text
-Duration = 5; -- how long notification is on screen
-})
